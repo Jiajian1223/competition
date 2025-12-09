@@ -1,4 +1,6 @@
 # CardiacSegV2
 環境架設：請參考https://colab.research.google.com/drive/1iC7i_EWCZsCr5T-7jDD77V8dt_simGsn?usp=sharing
 利用train.py設定參數、訓練集、訓練模型、實驗名稱等等開始第一次實驗，訓練的結果會存取在exp/exp/實驗名稱中
-利用retrain.py讀取第一次訓練的結果，
+利用retrain.py讀取第一次訓練的結果，讀取old_results中的best_checkpoint，並將訓練結果存取在new_results中。
+利用test讀取tune_result中的best_checkpoint，後讀取訓練集中設定的test資料，再輸出dice和iou等資訊。
+利用inference更改欲讀取的result以及實驗名稱，讀取在image中的CT影像，並將結果存在infer中。
